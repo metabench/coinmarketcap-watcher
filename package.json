@@ -3,12 +3,12 @@
   "main": "coinmarketcap-watcher.js",
   "license": "MIT",
   "dependencies": {
-    "jsgui3": "^0.0.8",
-    "arr-table": "^0.0.1",
+    "arr-table": "^0.0.4",
+    "lang-mini": "^0.0.2",
     "request": "^2.83.0"
   },
   "engines": {
-    "node": ">=6.5.0"
+    "node": ">=9.3.0"
   },
   "description": "Coinmarketcap Watcher",
   "author": "James Vickers <james@metabench.com>",
@@ -16,5 +16,5 @@
     "type": "git",
     "url": "https://github.com/metabench/coinmarketcap-watcher.git"
   },
-  "version": "0.0.1"
+  "version": "0.0.3"
 }

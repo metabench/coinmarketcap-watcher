@@ -1,36 +1,14 @@
-var jsgui = require('jsgui3');
-var each = jsgui.each;
-var Evented_Class = jsgui.Evented_Class;
+var lang_mini = require('lang-mini');
+var each = lang_mini.each;
+var Evented_Class = lang_mini.Evented_Class;
 
 //var autobahn = require('autobahn');
 var request = require('request');
 //var moment = require('moment');
 var Array_Table = require('arr-table');
 
-var arr_obj_to_arr_kv = (arr_obj) => {
-    var arr_items = [], arr_values;
-    each(arr_obj, (item) => {
-        if (item) {
-            arr_values = [];
-            each(item, (val) => {
-                arr_values.push(val);
-            });
-            //throw 'stop';
-            arr_items.push(arr_values);
-        }
-    });
-    var keys = Object.keys(arr_obj[0]);
-    var res = [keys, arr_items];
-    return res;
-}
-
-var arr_keys_to_obj_keys = (arr_keys) => {
-    var res = {};
-    each(arr_keys, (v, i) => {
-        res[i] = v;
-    });
-    return res;
-}
+var arr_obj_to_arr_kv = lang_mini.arr_obj_to_arr_kv;
+var arr_keys_to_obj_keys = lang_mini.arr_keys_to_obj_keys;
 
 class Coinmarketcap_Watcher extends Evented_Class {
     constructor() {
@@ -69,7 +47,7 @@ class Coinmarketcap_Watcher extends Evented_Class {
                 var res = at_top_25.get_arr_field_values('symbol');
                 //return res;
                 callback(null, res);
-                //jsgui.get_truth_map_from_arr
+                //lang_mini.get_truth_map_from_arr
             }
         });
     }
