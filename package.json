@@ -3,7 +3,7 @@
   "main": "coinmarketcap-watcher.js",
   "license": "MIT",
   "dependencies": {
-    "arr-table": "^0.0.4",
+    "arr-table": "^0.0.5",
     "lang-mini": "^0.0.2",
     "request": "^2.83.0"
   },
@@ -16,5 +16,5 @@
     "type": "git",
     "url": "https://github.com/metabench/coinmarketcap-watcher.git"
   },
-  "version": "0.0.3"
+  "version": "0.0.4"
 }
